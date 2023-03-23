@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Bank Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="bank.css">
+        <header>
+            <h1>Net Banking</h1>
+  
+        <nav>
+            <ul>
+                <li> <a href="file:///C:/Users/Administrator/Documents/HTML%20PROGRAMS/NETBANKING.HTML">Home </a> </li>
+                <li> <a href="#">About Us </a> </li>
+                <li> <a href="#">Net Banking </a> </li>
+                <li> <a href="#">Contact Us </a> </li>
+                </li>
+            </ul>
+        </nav>
+        
+    </header>
+    <div class="container">
+        
+        <h2>Bank Form</h2>
+        <p>Current date :</p>
+    <p id="current-date"></p>
+
+    <script>
+      var currentDate = new Date();
+      document.getElementById("current-date").innerHTML = currentDate;
+    </script>
+    
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required> 
+            <label for="aadhar">Aadhar Number:</label>
+            <input pattern="[0-9]{12}"type="text" id="aadhar" name="aadhar" placeholder="Enter Aadhar Number" required>
+            <label for="pan">PAN Number:</label>
+            <input pattern="[A-Z]{5}[0-9]{4}[A-Z]"type="text" id="pan" name="pan" placeholder="Enter PAN Number" required >
+            <label for="branch">Branch:</label>
+            <input type="text" id="branch" name="branch" >
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" >
+            <label for="time">Time:</label>
+            <input type="year" id="time" name="time" >
+            <label for="rate">Rate:</label>
+            <input type="number" id="rate" name="rate" >
+           
+            
+
+
+
+            <button class="button1" type="submit">Submit</button>
+            <br>
+            
+
+    
+           
+           
+            
+
+        </form>
+        <button class="button2" type="button" onclick="calculateintrest()">Calculate Interest</button>
+        <br>
+        <br>
+        <label for="total">Total Interest:</label>
+        <br>
+        <input type="number" id="total" name="total">
+        <p><span id="total"></span></p>
+    </div>
+    </head>
+    <body>
+        
+        
+        <script src="" async defer></script>
+        <script>
+            function calculateintrest(){
+    var amount=document.getElementById("amount").value;
+    var rate=document.getElementById("rate").value;
+    var time=document.getElementById("time").value;
+    var intrest =document.getElementById("total");
+    console.log("lkj");
+    var r=(amount*rate*time)/100
+    intrest.value = r;
+}
+
+        </script>
+    </body>
+</html>
